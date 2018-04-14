@@ -84,4 +84,7 @@ for(let key in objeto){
     console.log(key);
     console.log(objeto[key]);
 }
+router.get('/inicio')
+
+module.exports = router;
 

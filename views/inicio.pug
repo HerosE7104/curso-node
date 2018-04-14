@@ -1,8 +1,24 @@
 extends layout
 
 block content
- .pd container
+ .pd-container
     .container
-        p#prueba= title
+        #prueba= title
+            span hola
+            p buenas :c
 
         h1 #{ variable }
+
+ #carrusel.carrusel-contenedor
+    .carrusel-indicadores
+    //- i.indicador
+        i.indicador.activo
+        i.indicador
+    .carrusel-slider
+        .carrusel-item
+            .carrusel-background
+        .carrusel-item(style="backgroud-image: url('https://newevolutiondesigns.com/images/freebies/texture-wallpaper-13.jpg')")   
+            .carrusel-background
+        .carrusel-item(style="backgroud-image: url('https://www.planwallpaper.com/static/images/IMG_135890.jpg')")
+            .carrusel-background
+ div(style="heiht:1000px")

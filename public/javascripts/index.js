@@ -1,19 +1,24 @@
-/*let prueba = document.getElementById('prueba');
-console.log(prueba);*/
+/* console.log('FUNCIONAAAA!!!');
 
-/*let element = document.getElementById('carrusel');*/
-let element = $('#carrusel');
-let carrusel = new Carrusel(element);
-/*console.log(carrusel.speed);*/
+let prueba = document.getElementById('prueba');
 
-carrusel.init();
+console.log(prueba); */
 
-setTimeout(function(){
-    carrusel.next();
-},2000);
+//let element = document.getElementById('carousel');
+let element = $('#carousel');
 
-/*let chido = new Carrusel();
+let carousel = new Carousel(element, { auto: true });
+
+/* console.log(carousel.speed); */
+
+carousel.init();
+
+/* setTimeout(function() {
+    carousel.next();
+}, 2000); */
+
+/* let chido = new Carousel();
 
 chido.speed = 5000;
 
-chido.init();*/
+chido.init(); */

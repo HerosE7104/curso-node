@@ -1,24 +1,25 @@
 extends layout
 
 block content
- .pd-container
-    .container
-        #prueba= title
-            span hola
-            p buenas :c
+    .pd-container
+        .container
+            #prueba= title
+                span Hola
+                p Que tal
 
-        h1 #{ variable }
+            h1 #{ variable }
 
- #carrusel.carrusel-contenedor
-    .carrusel-indicadores
-    //- i.indicador
-        i.indicador.activo
-        i.indicador
-    .carrusel-slider
-        .carrusel-item
-            .carrusel-background
-        .carrusel-item(style="backgroud-image: url('https://newevolutiondesigns.com/images/freebies/texture-wallpaper-13.jpg')")   
-            .carrusel-background
-        .carrusel-item(style="backgroud-image: url('https://www.planwallpaper.com/static/images/IMG_135890.jpg')")
-            .carrusel-background
- div(style="heiht:1000px")
+    #carousel.carousel-container
+        .carousel-indicators
+            //- i.indicator
+            //- i.indicator.active
+            //- i.indicator
+        .carousel-slider
+            .carousel-item
+                .carousel-background
+            .carousel-item(style="background-image: url('https://images.pexels.com/photos/88630/pexels-photo-88630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')")
+                .carousel-background
+            .carousel-item(style="background-image: url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')")
+                .carousel-background
+
+    div(style="height:1000px")

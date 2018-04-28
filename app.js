@@ -1,10 +1,13 @@
+//van dependencias
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var galleta=require('cookie-session');
+var mongoose = require('mongoose');
 
+//se jalan rutas y archivos
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api');
@@ -25,6 +28,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+mongoose.connect('mongodb://localhost/carrito', function (error){
+  if(error){
+    throw error;
+  }else{
+    console.log('estas conectado a una base de datos no relacional men');
+  }
+});
+
 
 function validateSession(req, res, next){
   if(req.session.usuario) {
